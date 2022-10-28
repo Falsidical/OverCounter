@@ -1,0 +1,53 @@
+body {
+  background-color: orangered;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: url('../img/background.jpeg');
+  background-size: cover;
+  color: white;
+}
+
+.container {
+  margin-top: 16rem;
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.card {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 2px solid rgba(211, 12, 230, 0.911);
+  border-radius: 24px;
+  text-align: center;
+  min-width: 200px;
+  min-height: 300px;
+  padding: 1rem;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  height: 40px;
+}
+
+button {
+  color: white;
+  background-color: rgba(211, 12, 230, 0.911);
+  border-radius: 12px;
+  padding: 14px;
+  margin: 4px;
+  border: 0px;
+}
+
+button:hover {
+  background-color: rgba(242, 94, 255, 0.911);
+  cursor: pointer;
+}
+
+#reset {
+  position: absolute;
+  bottom: 4rem;
+  right: 4rem;
+}
