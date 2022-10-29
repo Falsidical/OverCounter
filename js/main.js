@@ -13,6 +13,16 @@ const botonMas3 = document.querySelector('#botonMas3');
 const reset = document.querySelector('#reset');
 
 const themeSelector = document.querySelector('#theme');
+const root = document.querySelector(':root');
+
+const themeColors = {
+  dark: ['#E22A7F', '#ff3d98'],
+  green: ['#16ff35e8', '#16ff35'],
+  sombra: ['#d30ce6e8', '#f25effe8'],
+  mercy: ['#f7e546e8', '#f8ea70'],
+  dva: ['#E22A7F', '#ff3d98'],
+  hanzo: ['#0c72e6e8', '#4ea0ffe8'],
+};
 
 let counter = {
   tankWins: 0,
@@ -93,6 +103,7 @@ themeSelector.addEventListener('change', () => {
       document.querySelector('body').style.backgroundImage = 'url(img/hanzo.jpg)';
       break;
   }
+  setColors(themeColors[themeSelector.value]);
   saveThemeInLocalStorage(themeSelector.value);
 });
 
@@ -102,8 +113,16 @@ function saveThemeInLocalStorage(theme) {
 
 function loadThemeFromLocalStorage() {
   let theme = localStorage.getItem('theme');
-  if (theme) document.querySelector('body').style.backgroundImage = `url(img/${theme}.jpg)`;
+  if (theme) {
+    document.querySelector('body').style.backgroundImage = `url(img/${theme}.jpg)`;
+    setColors(themeColors[theme]);
+  }
   updateText();
+}
+
+function setColors(color) {
+  root.style.setProperty('--main-color', color[0]);
+  root.style.setProperty('--secondary-color', color[1]);
 }
 
 loadFromLocalStorage();

@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,500;0,700;0,900;1,400&display=swap');
 
 :root {
-  --main-bg-color: #d30ce6e8;
-  --main-bg-color-hover: #f25effe8;
-  --done-bg-color: #16ff35e8;
+  --main-color: #d30ce6e8;
+  --secondary-color: #f25effe8;
 }
 
 body {
@@ -40,7 +39,7 @@ main {
 .card {
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  border: 3px solid var(--main-bg-color);
+  border: 3px solid var(--main-color);
   border-radius: 24px;
   text-align: center;
   min-width: 200px;
@@ -61,7 +60,7 @@ main {
 }
 
 .icon {
-  fill: var(--main-bg-color);
+  fill: var(--main-color);
   max-height: 80px;
 }
 
@@ -77,7 +76,7 @@ button,
 select,
 option {
   color: white;
-  background-color: var(--main-bg-color);
+  background-color: var(--main-color);
   border-radius: 12px;
   padding: 14px;
   margin: 4px;
@@ -87,8 +86,14 @@ option {
 }
 
 button:hover {
-  background-color: var(--main-bg-color-hover);
+  background-color: var(--secondary-color);
   cursor: pointer;
+}
+
+.counterButton {
+  font-size: 2rem;
+  min-width: 60px;
+  margin: 12px;
 }
 
 .buttons {
