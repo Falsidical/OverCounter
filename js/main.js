@@ -12,6 +12,8 @@ const botonMas3 = document.querySelector('#botonMas3');
 
 const reset = document.querySelector('#reset');
 
+const themeSelector = document.querySelector('#theme');
+
 let counter = {
   tankWins: 0,
   damageWins: 0,
@@ -73,4 +75,36 @@ reset.addEventListener('click', () => {
   saveInLocalStorage();
 });
 
+themeSelector.addEventListener('change', () => {
+  switch (themeSelector.value) {
+    case 'dark':
+      document.querySelector('body').style.backgroundImage = '';
+      break;
+    case 'sombra':
+      document.querySelector('body').style.backgroundImage = 'url(img/sombra.jpeg)';
+      break;
+    case 'mercy':
+      document.querySelector('body').style.backgroundImage = 'url(img/mercy.jpg)';
+      break;
+    case 'dva':
+      document.querySelector('body').style.backgroundImage = 'url(img/dva.jpg)';
+      break;
+    case 'hanzo':
+      document.querySelector('body').style.backgroundImage = 'url(img/hanzo.jpg)';
+      break;
+  }
+  saveThemeInLocalStorage(themeSelector.value);
+});
+
+function saveThemeInLocalStorage(theme) {
+  localStorage.setItem('theme', theme);
+}
+
+function loadThemeFromLocalStorage() {
+  let theme = localStorage.getItem('theme');
+  if (theme) document.querySelector('body').style.backgroundImage = `url(img/${theme}.jpg)`;
+  updateText();
+}
+
 loadFromLocalStorage();
+loadThemeFromLocalStorage();

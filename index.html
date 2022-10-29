@@ -9,43 +9,78 @@
     <title>OverCounter</title>
   </head>
   <body>
-    <div class="container">
-      <div class="tracker">
-        <div class="card">
-          <h3>Tank</h3>
-          <h1 id="contador1">0</h1>
+    <main>
+      <h1 class="title">Overwatch Role Mastery Counter</h1>
+      <div class="container">
+        <div class="tracker">
+          <div class="card">
+            <h3 class="rol">Tank</h3>
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.09 58.29">
+              <g id="Tank">
+                <path class="cls-1" d="M0,32.22V6.22s21.17-14,48.09,0v26.32s-11,17.81-24.04,25.75c0,0-13.04-8.07-24.04-26.07" />
+              </g>
+            </svg>
+            <h1 class="number" id="contador1">0</h1>
+          </div>
+          <div class="counter">
+            <button id="botonMenos1">-</button>
+            <h2>1</h2>
+            <button id="botonMas1">+</button>
+          </div>
         </div>
-        <div class="counter">
-          <button id="botonMenos1">-</button>
-          <h2>1</h2>
-          <button id="botonMas1">+</button>
-        </div>
-      </div>
 
-      <div class="tracker">
-        <div class="card">
-          <h3>Damage</h3>
-          <h1 id="contador2">0</h1>
+        <div class="tracker">
+          <div class="card">
+            <h3 class="rol">Damage</h3>
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.55 59.82">
+              <g id="DPS">
+                <path class="cls-1" d="M0,47.81H12.86V11.02S9.86,.19,6.43,0,0,10.93,0,10.93V47.81Z" />
+                <path class="cls-1" d="M0,52.81H12.86l.14,5.52s-2,1-6,1-7-1.03-7-1.03v-5.49Z" />
+                <path class="cls-1" d="M18.55,48.3h12.86V11.51S28.41,.68,24.98,.49s-6.43,10.93-6.43,10.93V48.3Z" />
+                <path class="cls-1" d="M18.55,53.3h12.86l.14,5.52s-2,1-6,1-7-1.03-7-1.03v-5.49Z" />
+                <path class="cls-1" d="M37.55,48.3h12.86V11.51S47.41,.68,43.98,.49s-6.43,10.93-6.43,10.93V48.3Z" />
+                <path class="cls-1" d="M37.55,53.3h12.86l.14,5.52s-2,1-6,1-7-1.03-7-1.03v-5.49Z" />
+              </g>
+            </svg>
+            <h1 class="number" id="contador2">0</h1>
+          </div>
+          <div class="counter">
+            <button id="botonMenos2">-</button>
+            <h2>1</h2>
+            <button id="botonMas2">+</button>
+          </div>
         </div>
-        <div class="counter">
-          <button id="botonMenos2">-</button>
-          <h2>1</h2>
-          <button id="botonMas2">+</button>
-        </div>
-      </div>
 
-      <div class="tracker">
-        <div class="card">
-          <h3>Support</h3>
-          <h1 id="contador3">0</h1>
-        </div>
-        <div class="counter">
-          <button id="botonMenos3">-</button>
-          <h2>1</h2>
-          <button id="botonMas3">+</button>
+        <div class="tracker">
+          <div class="card">
+            <h3 class="rol">Support</h3>
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.82 60.16">
+              <g id="Support">
+                <path
+                  class="cls-1"
+                  d="M20,18.14V2c0-1.1,.9-2,2-2h16.74c1.1,0,2,.9,2,2V18.14c0,1.1,.9,2,2,2h16.08c1.1,0,2,.9,2,2v16.03c0,1.1-.9,2-2,2h-16.41c-1.1,0-2,.9-2,2v15.99c0,1.1-.9,2-2,2H22c-1.1,0-2-.9-2-2v-16.16c0-1.11-.91-2.01-2.02-2l-15.97,.13c-1.11,0-2.02-.89-2.02-2v-15.98c0-1.1,.9-2,2-2H18c1.1,0,2-.9,2-2Z"
+                />
+              </g>
+            </svg>
+            <h1 class="number" id="contador3">0</h1>
+          </div>
+          <div class="counter">
+            <button id="botonMenos3">-</button>
+            <h2>1</h2>
+            <button id="botonMas3">+</button>
+          </div>
         </div>
       </div>
-    </div>
-    <button id="reset"><strong>RESET</strong></button>
+    </main>
+    <section class="buttons">
+      <button id="reset">Reset</button>
+      <select id="theme">
+        <option value="dark">Dark Theme</option>
+        <option value="sombra">Sombra</option>
+        <option value="mercy">Mercy</option>
+        <option value="dva">D.va</option>
+        <option value="hanzo">Hanzo</option>
+      </select>
+    </section>
   </body>
 </html>
